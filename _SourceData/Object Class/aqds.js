@@ -409,7 +409,7 @@ function changeFileExt(fileName, newExt)
 function createTreeImage(opened)
 {
 	var oImage = document.createElement("img");
-	oImage.src = "null.gif";
+	oImage.src = "_SourceData/Common/null.gif";
 	oImage.className = opened ? "icon icon-minus": "icon icon-plus";
 	oImage.width = 9;
 	oImage.height = 9;
@@ -425,7 +425,7 @@ function createTreeImage(opened)
 function createTreeImageDummy()
 {
 	var oImage = document.createElement("img");
-	oImage.src = "null.gif";
+	oImage.src = "_SourceData/Common/null.gif";
 	oImage.width = 9;
 	oImage.height = 9;
 	oImage.border = 0;
@@ -459,7 +459,7 @@ function showTreeImage(img)
 function createTreeStateImage(state)
 {
 	var oImage = document.createElement("img");
-	oImage.src = "null.gif";
+	oImage.src = "_SourceData/Common/null.gif";
 	if (state == 1) {
 		oImage.className = "icon icon-warning";
 	} else if (state == 2) {
@@ -609,7 +609,7 @@ function TabsObject(elementId, onselect, parent, initialActiveTabName, atBottom,
 		for (var i = 0; i < itemCount; i++)
 		{
 			if (itemCount > 1)
-				html += "<td style='width:4px; text-indent:0px;'><img src='null.gif' style='width:4px; height:1px;'></td>";
+				html += "<td style='width:4px; text-indent:0px;'><img src='_SourceData/Common/null.gif' style='width:4px; height:1px;'></td>";
 
 			html += "<td><div id='" + this.elementId + "_tab" + i + "' " +
 				"style='text-indent:0px; padding-left:8px; padding-right:8px; padding-" + posMain + ":" + (itemCount > 1 ? "3" : "1") + "px; padding-" + posOther + ":" + (itemCount > 1 ? "2" : "3") + "px; " +

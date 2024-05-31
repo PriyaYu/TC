@@ -566,8 +566,8 @@ function text_show_files_diffs(div, filename1, filename2, caption1, caption2)
 
 	var btn_td = "<td style='border:1px solid #ACA899; white-space: nowrap;' onmouseover='filesCompare_btnToggle(this, true)' onmouseout='filesCompare_btnToggle(this, false)' onmousedown='return false' ";
 	toolbar.innerHTML = "<table cellpadding=0 cellspacing=2 border=0><tr>" +
-		btn_td + "onclick='filesCompare_NextDiff()' ondblclick='filesCompare_NextDiff()' id='filesCompare_btnNext' class='btn_disabled'> <img src='null.gif' class='icon icon-sort-d' style='vertical-align:middle; margin:6px 0px 5px 5px;'> Next Difference &nbsp;&nbsp;</td>" +
-		btn_td + "onclick='filesCompare_PrevDiff()' ondblclick='filesCompare_PrevDiff()' id='filesCompare_btnPrev' class='btn_disabled'> <img src='null.gif' class='icon icon-sort-a' style='vertical-align:middle; margin:6px 0px 5px 5px;'> Previous Difference &nbsp;&nbsp;</td>" +
+		btn_td + "onclick='filesCompare_NextDiff()' ondblclick='filesCompare_NextDiff()' id='filesCompare_btnNext' class='btn_disabled'> <img src='_SourceData/Common/null.gif' class='icon icon-sort-d' style='vertical-align:middle; margin:6px 0px 5px 5px;'> Next Difference &nbsp;&nbsp;</td>" +
+		btn_td + "onclick='filesCompare_PrevDiff()' ondblclick='filesCompare_PrevDiff()' id='filesCompare_btnPrev' class='btn_disabled'> <img src='_SourceData/Common/null.gif' class='icon icon-sort-a' style='vertical-align:middle; margin:6px 0px 5px 5px;'> Previous Difference &nbsp;&nbsp;</td>" +
 		"</tr></table>";
 
 	var tbl = text_createTable(width, height, null, caption1, true, 2);

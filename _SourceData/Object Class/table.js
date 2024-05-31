@@ -787,7 +787,7 @@ function table_CreateRootFrame(element)
 				oDivHead.style.borderBottom = "0px";
 				oDivHead.m_element = element;
 				oDivHead.innerHTML = "<div class='cellCaption' style='overflow:hidden;'><div style='float:left; white-space:nowrap;'>Extended Information</div>" + 
-					"<img src='null.gif' class='icon icon-show' onmousemove='this.className=\"icon icon-show1\"' onmouseout='this.className=\"icon icon-show\"' " +
+					"<img src='_SourceData/Common/null.gif' class='icon icon-show' onmousemove='this.className=\"icon icon-show1\"' onmouseout='this.className=\"icon icon-show\"' " +
 					"style='float:right; margin:1px 3px 3px 1px; cursor:pointer;' onclick='detailsHeadBtnClick(this)' alt='Hide'></div>";
 				oTD.appendChild(oDivHead);
 
@@ -797,7 +797,7 @@ function table_CreateRootFrame(element)
 				oDivHead2.style.width = treeHeadWidth + "px";
 				oDivHead2.style.height =  "100%";
 				oDivHead2.m_element = element;
-				oDivHead2.innerHTML = "<img src='null.gif' class='icon icon-hide' onmousemove='this.className=\"icon icon-hide1\"' " +
+				oDivHead2.innerHTML = "<img src='_SourceData/Common/null.gif' class='icon icon-hide' onmousemove='this.className=\"icon icon-hide1\"' " +
 					"onmouseout='this.className=\"icon icon-hide\"' style='margin:3px; cursor:pointer;' " +
 					"onclick='detailsHeadBtnClick(this)' alt='Show'><div class='details_caption_vertical'>Extended Information</div>";
 				oTD.appendChild(oDivHead2);
@@ -1358,7 +1358,7 @@ function table_CreateRows(element, parentRow, parentid, level)
 					{
 						var nodeDescription = nodeValue;
 						if (nodeValue.indexOf(".") < 0)
-							oSpan.innerHTML = "<img src=\"null.gif\" border=\"0\" class=\"icon icon-" + nodeValue.toLowerCase().replace(/\s/g, '-') + "\" style=\"position: relative; top:1px;\"/>";
+							oSpan.innerHTML = "<img src=\"_SourceData/Common/null.gif\" border=\"0\" class=\"icon icon-" + nodeValue.toLowerCase().replace(/\s/g, '-') + "\" style=\"position: relative; top:1px;\"/>";
 						else
 						{
 							nodeDescription = "";
@@ -1838,7 +1838,7 @@ function table_showLinkPopup(oTD, MHT_XML, show_content, nestedObject) // Open l
 
 	var html = "<TABLE cellpadding=0 cellspacing=0 width='100%'><TR><TD>&nbsp;" + 
 		"<A " + blank + " href='" + link + "'>Open link in " + (MHT_XML ? "the main" : "a new") + " window</A></TD>" +
-		(!MHT_XML ? "<TD style='width:13px;'><INPUT type='image' width=13 height=13 src='null.gif' class='icon icon-close' title='Hide' onclick='table_hideLinkPopup(this)' " +
+		(!MHT_XML ? "<TD style='width:13px;'><INPUT type='image' width=13 height=13 src='_SourceData/Common/null.gif' class='icon icon-close' title='Hide' onclick='table_hideLinkPopup(this)' " +
 			"onmouseover='this.className=\"icon icon-close1\"' onmouseout='this.className=\"icon icon-close\"'></TD>" : "") + "</TR></TABLE>";
 	div2.innerHTML = html;
 	div.appendChild(div2);
@@ -2211,7 +2211,7 @@ function table_showFilterOptions(element, show)
 		oTD.style.paddingTop = "4px";
 		var oBtn = document.createElement("INPUT");
 		oBtn.type = "image";
-		oBtn.src = "null.gif";
+		oBtn.src = "_SourceData/Common/null.gif";
 		oBtn.className = "icon icon-close";
 		oBtn.title = "Remove filter";
 		oBtn.onmouseover = function () { this.className = 'icon icon-close1'; }
@@ -2479,7 +2479,7 @@ function table_updateToolbar(element)
 		{
 			element.m_toolbar.searchboxCreated = true;
 			element.m_toolbar.m_search.style.padding = "2px";
-			element.m_toolbar.m_search.innerHTML = "&nbsp;&nbsp;<img src='null.gif' class='icon icon-search' style='vertical-align:middle;'>&nbsp;" +
+			element.m_toolbar.m_search.innerHTML = "&nbsp;&nbsp;<img src='_SourceData/Common/null.gif' class='icon icon-search' style='vertical-align:middle;'>&nbsp;" +
 				"<input type='search' style='width:160px; height:22px; box-sizing:border-box;' oninput='table_searchTextChanged(this, false)' onchange='table_searchTextChanged(this, true)' value='" + (element.textToSearch || "").replace("'", "\"") + "'>";
 		}
 		

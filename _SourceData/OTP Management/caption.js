@@ -60,7 +60,7 @@ function caption_CreateControl(element, m_static)
 
 	var oImg = document.createElement("IMG");
 	oImg.ownerCell = element;
-	oImg.src = "null.gif";
+	oImg.src = "_SourceData/Common/null.gif";
 	oImg.width = 10;
 	oImg.height = 9;
 	element.sortImage = oImg;
@@ -78,7 +78,7 @@ function caption_CreateControl(element, m_static)
 	var filterEnabled = element.column.filterList.length > 1;
 	var oImg = document.createElement("IMG");
 	oImg.ownerCell = element;
-	oImg.src = "null.gif";
+	oImg.src = "_SourceData/Common/null.gif";
 	oImg.className = "icon icon-filter0";
 	oImg.width = 13;
 	oImg.height = 13;
@@ -228,7 +228,7 @@ function caption_createFilterButton(element, oTable, text, image, posX, posY, bt
 	if (image != "")
 	{
 		oBtn.type = "image";
-		oBtn.src = "null.gif";
+		oBtn.src = "_SourceData/Common/null.gif";
 		oBtn.className = "icon icon-" + image;
 		oBtn.alt = text;
 	}
