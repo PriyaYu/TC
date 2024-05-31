@@ -1225,7 +1225,7 @@ function showLog()
 	var clientWidth = document.body.clientWidth;
 	if (clientWidth > 0 && typeof(aqds_js) != 'undefined' && typeof(caption_js) != 'undefined' &&
 		typeof(picture_js) != 'undefined' && typeof(table_js) != 'undefined' && typeof(text_js) != 'undefined')
-		logtree_loadComponent(document.getElementById("logroot"), "_root.js");
+		logtree_loadComponent(document.getElementById("logroot"), "_SourceData/Object Class/_root.js");
 	else
 		window.setTimeout(showLog, 50);
 }

@@ -78,7 +78,7 @@ function logtree_loadComponent(element, src)
 	m_treecell.appendChild(m_treehead);
 	
 	m_treehead.innerHTML = "<div class='cellCaption'><div style='float:left'>Log Tree</div>" +
-	  "<img src='null.gif' class='icon icon-hide' onmousemove='this.className=\"icon icon-hide1\"' onmouseout='this.className=\"icon icon-hide\"' " +
+	  "<img src='_SourceData/Common/null.gif' class='icon icon-hide' onmousemove='this.className=\"icon icon-hide1\"' onmouseout='this.className=\"icon icon-hide\"' " +
 	  "style='float:right; margin:1px 3px 3px 1px; cursor:pointer;' " +
 	  "onclick='treeHeadBtnClick()' alt='Hide'></div>";
 	
@@ -90,7 +90,7 @@ function logtree_loadComponent(element, src)
 	m_treehead2.id = "treehead2";
 	m_treecell.appendChild(m_treehead2);
 	
-	m_treehead2.innerHTML = "<img src='null.gif' class='icon icon-show' onmousemove='this.className=\"icon icon-show1\"' " +
+	m_treehead2.innerHTML = "<img src='_SourceData/Common/null.gif' class='icon icon-show' onmousemove='this.className=\"icon icon-show1\"' " +
 	  "onmouseout='this.className=\"icon icon-show\"' style='margin:3px; cursor:pointer;' " +
 	  "onclick='treeHeadBtnClick()' alt='Show'>" +
 	  "<div class='logtree_caption_vertical'>Log Tree</div>";
@@ -120,9 +120,9 @@ function logtree_loadComponent(element, src)
 
 	var btn_td = "<td style='border:1px solid #ACA899; cursor:pointer; white-space: nowrap;' onmouseover='this.style.backgroundColor=\"#C0D0F0\"' onmouseout='this.style.backgroundColor=\"white\"' onmousedown='return false' ";
 	m_treetoolbar.innerHTML = "<table cellpadding=0 cellspacing=2 border=0><tr>" +
-		btn_td + "onclick='logtree_ExpandAll(true)'> <img src='null.gif' class='icon icon-expand' style='vertical-align:middle'" + (treeToolbarCaptions ? "> " : " title='") +"Expand All" + (treeToolbarCaptions ? "&nbsp;&nbsp;" : "'>") + "</td>" +
-		btn_td + "onclick='logtree_ExpandAll(false)'> <img src='null.gif' class='icon icon-collapse' style='vertical-align:middle'" + (treeToolbarCaptions ? "> " : " title='") +"Collapse All" + (treeToolbarCaptions ? "&nbsp;&nbsp;" : "'>") + "</td>" +
-		btn_td + "onclick='logtree_GoToError(); if (window.event) window.event.cancelBubble = true;'> <img src='null.gif' class='icon icon-error' style='margin:2px; vertical-align:middle'" + (treeToolbarCaptions ? "> <span>" : " title='") +"Go to Next Error" + (treeToolbarCaptions ? "</span>&nbsp;&nbsp;" : "'>") + "</td>" +
+		btn_td + "onclick='logtree_ExpandAll(true)'> <img src='_SourceData/Common/null.gif' class='icon icon-expand' style='vertical-align:middle'" + (treeToolbarCaptions ? "> " : " title='") +"Expand All" + (treeToolbarCaptions ? "&nbsp;&nbsp;" : "'>") + "</td>" +
+		btn_td + "onclick='logtree_ExpandAll(false)'> <img src='_SourceData/Common/null.gif' class='icon icon-collapse' style='vertical-align:middle'" + (treeToolbarCaptions ? "> " : " title='") +"Collapse All" + (treeToolbarCaptions ? "&nbsp;&nbsp;" : "'>") + "</td>" +
+		btn_td + "onclick='logtree_GoToError(); if (window.event) window.event.cancelBubble = true;'> <img src='_SourceData/Common/null.gif' class='icon icon-error' style='margin:2px; vertical-align:middle'" + (treeToolbarCaptions ? "> <span>" : " title='") +"Go to Next Error" + (treeToolbarCaptions ? "</span>&nbsp;&nbsp;" : "'>") + "</td>" +
 		"</tr></table>";
 
 	var oTD = document.createElement("TD");
@@ -449,7 +449,7 @@ function logtree_ShowInfo(element)
 		var endTime   = (info.endTime   ? logtree_dateToString(new Date(new Number(info.endTime  ))) : "N/A");
 		var runTime   = ((info.startTime && info.endTime) ? table_msecToString(info.endTime - info.startTime, true) : "N/A");
 		m_loginfo.innerHTML = 
-			"<img src='null.gif' class='icon icon-close' style='float:right; margin:1px; cursor:" + m_PointerCursor + "' onmouseover='this.className=\"icon icon-close1\"' onmouseout='this.className=\"icon icon-close\"' onclick='logtree_hideInfo()'>" +
+			"<img src='_SourceData/Common/null.gif' class='icon icon-close' style='float:right; margin:1px; cursor:" + m_PointerCursor + "' onmouseover='this.className=\"icon icon-close1\"' onmouseout='this.className=\"icon icon-close\"' onclick='logtree_hideInfo()'>" +
 			"<table cellpadding=1 cellspacing=2 border=0>" +
 			"<tr><td style='width:60px'>Errors:    </td><td>" + info.errorCount   + "</td></tr>" + 
 			"<tr><td>Warnings:  </td><td>" + info.warningCount + "</td></tr>" +
@@ -1225,7 +1225,7 @@ function showLog()
 	var clientWidth = document.body.clientWidth;
 	if (clientWidth > 0 && typeof(aqds_js) != 'undefined' && typeof(caption_js) != 'undefined' &&
 		typeof(picture_js) != 'undefined' && typeof(table_js) != 'undefined' && typeof(text_js) != 'undefined')
-		logtree_loadComponent(document.getElementById("logroot"), "_root.js");
+		logtree_loadComponent(document.getElementById("logroot"), "_SourceData/Labels/_root.js");
 	else
 		window.setTimeout(showLog, 50);
 }
